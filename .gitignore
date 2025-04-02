@@ -1,0 +1,17 @@
+/allure/*
+*.iml
+failures
+/download_tmp
+/downloaded_files
+/allure/
+*.log
+*.log.*
+/*.log
+/recordings
+.idea
+/latest_logs
+assets
+testcases/web_ui/accounting/latest_logs
+qodana.yaml
+testcases/web_ui/others/saved_cookies
+backup
