@@ -104,23 +104,9 @@ def duration():
 def send_results():
     result = read_report()
 
-    # 自动化测试小组
-    # url = 'https://www.yunzhijia.com/gateway/robot/webhook/send?yzjtype=0&yzjtoken=3b7984b7e91b467ba0912503125f93cc'
+    url = ''
 
-    # 测试大群
-    # url = 'https://www.yunzhijia.com/gateway/robot/webhook/send?yzjtype=0&yzjtoken=817237496cd14c4da582cf61a8a465f5'
-
-    # 管家发版群
-    # url = 'https://www.yunzhijia.com/gateway/robot/webhook/send?yzjtype=0&yzjtoken=8499063b73d041c0a11cdd89bddf64f3'
-
-    # 自动化结果通知群
-    url = 'https://www.yunzhijia.com/gateway/robot/webhook/send?yzjtype=0&yzjtoken=09192e2e2c6d4d568d4519908db85e5f'
-
-    # test
-    # url = 'https://www.yunzhijia.com/gateway/robot/webhook/send?yzjtype=0&yzjtoken=d59d367fb1614200a4ec9999bf8a8db9'
-
-    # 账无忧识别服务问题反馈群
-    url_fb = 'https://www.yunzhijia.com/gateway/robot/webhook/send?yzjtype=0&yzjtoken=0c50a2bc8b6c4f0780ce935193e99d00'
+    url_fb = ''
 
     if os.environ["test_model"] == '仅执行指定功能' and os.environ["test_feature"]:
         features = f'\n\t指定功能：{os.environ["test_feature"]}'
@@ -141,28 +127,12 @@ def send_results():
                    f'\n\t其他状态：{result.get("xfailed") + result.get("xpassed")}'
                    f'\n\t累计重试：{result.get("rerun")}'
                    f'\n成功率：{round(result.get("passed") / result.get("total") * 100, 2)}%'
-                   '\n测试报告地址：http://172.20.184.42:8080'
-                   '\n\t账号：report / 密码：Kdzwy^%$321'
-                   '\n\t点击 autotest -> Allure Report',
+                   '\n测试报告地址：http://',
         'notifyParams': [
             {
                 "type": "mobiles",
                 "values": [
-                    "13590178916",
-                    "13538101172",
-                    "13926542714",
-                    "13715181123",
-                    "15018501281",
-                    "16675397962",
-                    "13155555467",
-                    "13640002145",
-                    "15875504850",
-                    "18708916965",
-                    "17877008801",
-                    "15180563630",
-                    "15818625503",
-                    "13510242127",
-                    '18845636132'
+
                 ]
             }
         ]
